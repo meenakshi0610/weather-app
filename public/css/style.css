@@ -25,14 +25,14 @@ body{
 }
 .navbar{
     color:#fff;
-    padding :2rem 0;
+    padding :1.2rem 0;
 }.navbar li{
     margin-left: 3rem;
     padding: 2rem;
 }
 .navbar a{
     color:#fff;
-    font-size: 1.9rem;
+    font-size: medium;
 
 }
 .navbar .navbar-brand{
