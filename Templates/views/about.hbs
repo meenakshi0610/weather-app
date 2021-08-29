@@ -1,70 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
-    <title>Whether app</title>
-</head>
-
-<body class="d-flex flex-column vh-100">
-    {{!navigation bar}}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand ms-3" href="/" style="font-size: x-large;"><i
-                    class="fas fa-cloud-showers-heavy"></i>Whether App</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="/"><b>HOME</b></a>
-                    <a class="nav-link" href="/wheather"><b>WHEATHER</b></a>
-                    <a class="nav-link" href="/about"><b>ABOUT US</b></a>
+<div class="container-fluid main_header">
+    <div class="row">
+        <div class="col-md-10 col-12 mx-auto">
+            <div class="row">
+                {{! right menu.......}}
+                <div class='col-md-6 col-12 main_header_right'>
+                    <figure><img src="images/face.png" alt="face" class="img-fluid"></figure>
                 </div>
-            </div>
-        </div>
-    </nav>
-    {{! main menu.......}}
- <div class="container-fluid main_header">
-        <div class="row">
-            <div class="col-md-10 col-12 mx-auto">
-                <div class="row">
- {{! right menu.......}}
-                    <div class='col-md-6 col-12 main_header_right'>
-                        <figure><img src="images/face.png" alt="face" class="img-fluid"></figure>
-                     </div>
-                    {{! left menu.......}}
-                    <div class='col-md-6 col-12 main_header_left'>
-                        <p> welcome to Our weather app</p>
-                        <h1> We are a <span style="color: blue;">Mern Stack Developer</span> and student </h1>
-                        <a href="/weather"><button> Check now</button></a>
-                    </div>
+                {{! left menu.......}}
+                <div class='col-md-6 col-12 main_header_left'>
+                    <p> welcome to Our weather app</p>
+                    <h1> We are a <span style="color: blue;">Mern Stack Developer</span> and student </h1>
+                    <a href="/weather"><button> Check now</button></a>
                 </div>
             </div>
         </div>
     </div>
-
-
-    {{! footer.....}}
-    <footer class="footer bg-light py-3 mt-auto">
-<p>created by Meenakshi🤍</p>
- </footer>
-
- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
-        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
-        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
-        crossorigin="anonymous"></script>
-</body>
-</html>
+</div>
