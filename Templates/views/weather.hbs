@@ -1,29 +1,58 @@
 {{>boilerplate}}
-<div class="container-fluid main_header">
-    <div class="row">
-        <div class="col-md-10 col-12 mx-auto">
-            <div class="main_content">
+<div class="container-fluid main_header mx-5 my-3">
+    <div class="row g-3 align-items-center mb-5" id="search-box">
+        <div class="col-auto">
+            <label for="city" class="col-form-label">Enter Your City</label>
+        </div>
+        <div class="col-auto input-group-lg">
+            <input type="text" id="city" class="form-control" style="width: 30rem;">
+        </div>
+    </div>
 
-                <form class="temp_form">
-                    <input type="text" id="cityName" placeholder="Enter your city name">
-                    <input type="submit" value="search" id="submitbtn">
-                </form>
-            </div>
-            <div class="tempinfo">
-                <div class="top_layer">
-                    <p id='day'>SUNday</p>
-                    <p id="Tdate">30 Aug </p>
-                </div>
-                <div class="main_layer">
-                    <p id="cityname">Get output here </p>
-                    <div class="middlelayer data_hide">
-                        <p id="temp"><span>0</span><sup>o</sup>C</p>
-                        <p id="temp_status"><i class="fa fa-cloud" aria-hidden="true"></i></p>
-                    </div>
-                </div>
 
+    <div class="row mt-5" id="weather-data">
+        <div class="col-md-4 col-12 pt-5 d-flex justify-content-center">
+            <div class="card" style="width: 30rem; border: none;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-muted text-center">{{{datetime}}}</li>
+                </ul>
+                <img src="images/cloudy.png" class="card-img-top" alt="..."> {{! img according to weather info}}
+                <div class="card-body py-0">
+                    <h3 class="card-title weather-type text-center">Partly Sunny</h3>
+                    <p class="card-text temprature text-center">30°C</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item py-0" style="border: none;">
+                        <div class="row">
+                            <div class="col-6">
+                                <span class="text-muted text-start" id="weather-span">Humidity</span>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end" id="weather-span">
+                                <span>45%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item" style="border: none;">
+                        <div class="row">
+                            <div class="col-6">
+                                <span class="text-muted text-start" id="weather-span">Wind Speed</span>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end" id="weather-span">
+                                <span>19.2 km/j</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
+
+        <div class="col-md-8 col-12 pt-5 d-dlex justify-content-center"></div>
+
+
+
+
+
+
     </div>
 </div>
 {{>boilerplate2}}

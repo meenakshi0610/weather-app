@@ -20,7 +20,17 @@ app.get('/about',(req, res)=>{
     res.render('about.hbs');
 });
 app.get('/weather',(req, res)=>{
-    res.render('weather.hbs');
+    var weekday = new Array(7);
+    weekday[0] = "Sun";
+    weekday[1] = "Mon";
+    weekday[2] = "Tues";
+    weekday[3] = "Wed";
+    weekday[4] = "Thu";
+    weekday[5] = "Fri";
+    weekday[6] = "Sat";
+    var day = Number(new Date().getDay());
+    var datetime = new Date().toLocaleTimeString('en-US', { hour12: false, hour: "numeric", minute: "numeric" }) + ", " + weekday[Number(day)] + ", " + new Date().toLocaleDateString().replace(',', '');
+    res.render('weather.hbs', {datetime});
 });
 app.get('*',(req, res)=>{
     res.send('errorpage 404 not found');
