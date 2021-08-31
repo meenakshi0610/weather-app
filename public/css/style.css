@@ -16,6 +16,8 @@ body{
     display:flex;
     flex-direction:column ;
     font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+    font-weight: bolder;
 }
 .row{
    margin:0; 
@@ -66,7 +68,7 @@ body{
  .main_header_left .textsp{
      color: var(--main-bg);
  }
- .main_header_left button{
+ #default-button{
    border: none;
    padding: 0.8rem 1.8rem;
    font-size:2rem;
@@ -80,12 +82,6 @@ body{
     color: white;
 }
 /*weather page style*/
-#search-box{
-    font-size: large;
-}
-#search-box input{
-    border-radius:25px;
-}
 #weather-data{
     font-size: large;
 }
