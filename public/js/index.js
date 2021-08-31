@@ -4,7 +4,8 @@ const citytext = document.getElementById('citytxt');
 const tempstatusv = document.getElementById('tempstatus');
 const tempv = document.getElementById('temp');
 const weatherimg = document.getElementById('weatherimg');
-
+const humidity = document.getElementById('humidity');
+const windSpeed = document.getElementById('windspeed');
 
 const getinfo = async (event) => {
     event.preventDefault();
@@ -20,16 +21,11 @@ const getinfo = async (event) => {
             citytext.innerText = `${arr[0].name}, ${arr[0].sys.country}`;
             tempv.innerText = arr[0].main.temp;
             tempstatusv.innerText = arr[0].weather[0].main;
-
-            tempstatevalue = arr[0].weather[0].main;
-            if (tempstatevalue == "Clear") {
-                weatherimg.src = "";
-            } else if (tempstatevalue == "Clouds") {
-                weatherimg.src = "";
-            } else if (tempstatevalue == "Rain") {
-                weatherimg.src = "";
-            }
-        } catch {
+            humidity.innerText = arr[0].main.humidity;
+            windSpeed.innerText = arr[0].wind.speed;
+            weatherimg.src = `images/Icons/${arr[0].weather[0].icon}.png`;
+        } catch(err){
+            console.log(err);
             citytext.innerText = 'plz enter correct city name';
         }
     }
